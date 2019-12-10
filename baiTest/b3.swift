@@ -10,7 +10,7 @@ import Foundation
 func bai2(){
     print("Nhập số n: ")
     let n = Int(readLine()!)!
-    func kt(n:Int) -> Bool {
+    func checkNguyenTo(n:Int) -> Bool {
         var demUocSo = 0
         if n<2 {
             return false
@@ -31,20 +31,22 @@ func bai2(){
             }
         }
     }
+    
     // Kiểm tra là số nguyên tố hay không
-    if kt(n: n) == true {
+    if checkNguyenTo(n: n) == true {
         print("\(n) là số nguyên tố")
     } else {
         print("\(n) không là số nguyên tố")
     }
+    
     // Tìm số nguyên tố lớn hơn gần nhất
     var x = n + 1
-    if kt(n: x) == true {
+    if checkNguyenTo(n: x) == true {
         print("Số nguyên tố lớn hơn gần nhất với \(n) là \(x)")
     } else {
-        while kt(n: x) == false {
+        while checkNguyenTo(n: x) == false {
             x += 1
-            if kt(n: x) == true {
+            if checkNguyenTo(n: x) == true {
                 print("Số nguyên tố lớn hơn gần nhất với \(n) là \(x)")
                 break
             }
