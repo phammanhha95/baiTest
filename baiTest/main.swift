@@ -8,5 +8,7 @@
 
 import Foundation
 
-print("Hello, World!")
 
+
+bai2()
+//bai1()
